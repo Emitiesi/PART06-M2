@@ -1,1 +1,37 @@
 // Mixins acá
+.flex(@direccion, @justify, @aling){
+    display: flex;
+    flex-direction: @direccion;
+    justify-content: @justify;
+    align-items: @aling;
+}
+
+.redondeo(@radius){
+    border-radius: @radius;
+}
+
+.btn(){
+    border:none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.boton(@fondo, @letra){
+    .btn();
+    background-color: @fondo;
+    color:@letra;
+
+    &:hover {
+        background-color: blue;
+        color: black;
+        border: 1px solid green;
+
+    }
+}
+
+
